@@ -3,9 +3,21 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RJSilvas.MyFinances", "RJSilvas.MyFinances\RJSilvas.MyFinances.csproj", "{69B1A3C4-DF74-4551-B8B9-D5A6582E6821}"
-EndProject
 Project("{E53339B2-1760-4266-BCC7-CA923CBCF16C}") = "docker-compose", "docker-compose.dcproj", "{2090CEA0-9E95-4F2C-A759-84C0E1530AD8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{49034D39-0A76-4F63-9B27-C0F56AD79EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Services", "Services", "{7D79DB6A-2828-42D5-97A0-0CAEE0B84BCD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MyFinances", "MyFinances", "{4FC5FCD4-9127-483A-B54A-6C4126270CBA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RJSilvas.MyFinances.WebAPI", "src\Backend\Services\MyFinances\RJSilvas.MyFinances.WebAPI\RJSilvas.MyFinances.WebAPI.csproj", "{4D946580-F416-4DCD-BA5F-CAD2893CF9D1}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{94622841-93B7-481A-9F04-D042F6633D1E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Desktop", "Desktop", "{F4A4C3D5-1E57-40F8-B753-D976C0EB4C29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RJSilvas.MyFinances.Desktop.App", "src\Frontend\Desktop\RJSilvas.MyFinances.Desktop.App\RJSilvas.MyFinances.Desktop.App.csproj", "{9B737764-C3E2-4C21-8AA2-5F94C0D0326F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,17 +25,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{69B1A3C4-DF74-4551-B8B9-D5A6582E6821}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{69B1A3C4-DF74-4551-B8B9-D5A6582E6821}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{69B1A3C4-DF74-4551-B8B9-D5A6582E6821}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{69B1A3C4-DF74-4551-B8B9-D5A6582E6821}.Release|Any CPU.Build.0 = Release|Any CPU
 		{2090CEA0-9E95-4F2C-A759-84C0E1530AD8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{2090CEA0-9E95-4F2C-A759-84C0E1530AD8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2090CEA0-9E95-4F2C-A759-84C0E1530AD8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2090CEA0-9E95-4F2C-A759-84C0E1530AD8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D946580-F416-4DCD-BA5F-CAD2893CF9D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D946580-F416-4DCD-BA5F-CAD2893CF9D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D946580-F416-4DCD-BA5F-CAD2893CF9D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D946580-F416-4DCD-BA5F-CAD2893CF9D1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B737764-C3E2-4C21-8AA2-5F94C0D0326F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B737764-C3E2-4C21-8AA2-5F94C0D0326F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B737764-C3E2-4C21-8AA2-5F94C0D0326F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B737764-C3E2-4C21-8AA2-5F94C0D0326F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7D79DB6A-2828-42D5-97A0-0CAEE0B84BCD} = {49034D39-0A76-4F63-9B27-C0F56AD79EE6}
+		{4FC5FCD4-9127-483A-B54A-6C4126270CBA} = {7D79DB6A-2828-42D5-97A0-0CAEE0B84BCD}
+		{4D946580-F416-4DCD-BA5F-CAD2893CF9D1} = {4FC5FCD4-9127-483A-B54A-6C4126270CBA}
+		{F4A4C3D5-1E57-40F8-B753-D976C0EB4C29} = {94622841-93B7-481A-9F04-D042F6633D1E}
+		{9B737764-C3E2-4C21-8AA2-5F94C0D0326F} = {F4A4C3D5-1E57-40F8-B753-D976C0EB4C29}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {6D9DEEF7-683D-4663-B242-E09328907015}

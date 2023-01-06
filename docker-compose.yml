@@ -5,8 +5,8 @@ services:
     image: ${DOCKER_REGISTRY-}rjsilvasmyfinances
     container_name: webapi
     build:
-      context: .
-      dockerfile: RJSilvas.MyFinances/Dockerfile
+      context: .      
+      dockerfile: src/Backend/Services/MyFinances/RJSilvas.MyFinances.WebAPI/Dockerfile      
     depends_on: 
       - database
     ports:
@@ -24,13 +24,11 @@ services:
     expose: 
         - 3306
     volumes:
+        - ./data/MyFinances/init.sql:/docker-entrypoint-initdb.d/init.sql
         - db-volume:/var/lib/mysql
     restart: always
     environment: 
         MYSQL_ROOT_PASSWORD: admin
-        MYSQL_USER: renatojsilvas
-        MYSQL_PASSWORD: admin
-        MYSQL_DATABASE: userdb
-
+        
 volumes:
   db-volume:
