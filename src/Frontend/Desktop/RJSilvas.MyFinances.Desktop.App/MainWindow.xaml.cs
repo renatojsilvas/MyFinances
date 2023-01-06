@@ -29,7 +29,7 @@ namespace RJSilvas.MyFinances.Desktop.App
         private async void Button_Click(object sender, RoutedEventArgs e)
         {
             var httpClient = new HttpClient();
-            var response = await httpClient.GetAsync(@"http://localhost:5000/WeatherForecast");
+            var response = await httpClient.GetAsync(@"http://localhost:5000/api/Users");
             var result = await response.Content.ReadAsStringAsync();
             resultTxt.Text = result;
         }

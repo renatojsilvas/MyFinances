@@ -11,7 +11,7 @@ namespace RJSilvas.MyFinances.WebAPI.Controllers
         [HttpGet(Name = "GetUser")]
         public string Get()
         {
-            string connectionString = "datasource=localhost;port=3306;username=renatojsilvas;password=admin";            
+            string connectionString = "datasource=mysqldb;port=3306;username=renatojsilvas;password=admin";            
             string query = "select * from myfinances.user;";
             
             var connection = new MySqlConnection(connectionString);
