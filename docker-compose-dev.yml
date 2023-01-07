@@ -2,8 +2,11 @@ version: '3.4'
 
 services:
   rjsilvas.myfinances:
-    image: renatojsilvas/myfinances:latest
+    image: ${DOCKER_REGISTRY-}rjsilvasmyfinances
     container_name: webapi
+    build:
+      context: .      
+      dockerfile: src/Backend/Services/MyFinances/RJSilvas.MyFinances.WebAPI/Dockerfile      
     depends_on: 
       - database
     ports:
